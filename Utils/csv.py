@@ -15,7 +15,6 @@ class Csv:
     def upload(self, key_title, value_title, check_box, line_edit):
         self.file_name = QFileDialog.getOpenFileName(
             caption="Open CSV File",
-            directory=r"C:\Users\devin\Desktop\Python\CSVs",
             filter="CSV Files, *.csv")[0]
 
         if len(self.file_name) == 0:
