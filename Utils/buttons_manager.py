@@ -29,14 +29,15 @@ class ButtonsManager:
 
         # Put checkbox to True and store file name on lineEdit
         self.fusebox.upload_pos(self.fusebox,
-                        self.ui.upload_fusebox_checkBox,
-                        self.ui.fuseboxLineEdit)
+                                self.ui.upload_fusebox_checkBox,
+                                self.ui.fuseboxLineEdit)
 
     # Method used when Siriusware Upload Button is clicked
     # If the we can make a dictionary from the uploaded file then a checkmark is applied, the file name is
     # stored in the lineEdit, the inspectButton is enabled, and the finishButton is enabled.
     def load_siriusware(self):
-        answer = self.siriusware.upload("pc_descrip", "amount", self.ui.upload_siriusware_checkBox, self.ui.siriuswareLineEdit)
+        answer = self.siriusware.upload("pc_descrip", "amount", self.ui.upload_siriusware_checkBox,
+                                        self.ui.siriuswareLineEdit)
 
         if answer is None:
             return
@@ -49,8 +50,8 @@ class ButtonsManager:
 
         # Put checkbox to True and store file name on lineEdit
         self.siriusware.upload_pos(self.siriusware,
-                        self.ui.upload_siriusware_checkBox,
-                        self.ui.siriuswareLineEdit)
+                                   self.ui.upload_siriusware_checkBox,
+                                   self.ui.siriuswareLineEdit)
 
         # Enable the inspectButton and finishButton
         self.ui.inspectButton.setEnabled(True)
@@ -79,7 +80,7 @@ class ButtonsManager:
         # If the over/short can not be calculated then show the user and error message and return to app.
         if self.inspect() is False:
             QtWidgets.QMessageBox.critical(self.QtWidget, 'Error', "Over/Short can not be calculated. "
-                                                          "Check and make sure input fields only have numbers")
+                                                                   "Check and make sure input fields only have numbers")
             return
 
         # Open BLANK_Daily.xlsx > store values from siriusware and fusebox dictionaries in proper cells > store user
