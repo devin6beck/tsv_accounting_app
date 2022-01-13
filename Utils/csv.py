@@ -7,11 +7,6 @@ class Csv:
     def __init__(self, QtWidget):
         self.QtWidget = QtWidget
 
-        # Took this out because I don't think you need to create an instance. It can be created in a method below.
-        # self.file_name = None
-        # Start dictionary as empty so later during inspection inspect() knows to add 0 as values to fusebox
-        # self.dictionary = {}
-
     def upload(self, key_title, value_title, check_box, line_edit):
         self.file_name = QFileDialog.getOpenFileName(
             caption="Open CSV File",
