@@ -53,9 +53,6 @@ class Csv:
         # Get values from fusebox and make a dictionary using the credit card names as the keys
         self.dictionary = {description[i]: amount[i] for i in range(len(description))}
 
-
-    # Change it so that QtWidget is given as a parameter when Csv() is made. call self.QtWidget here instead when it
-    # is fixed
     def error_upload_message(self, key, value, check_box, line_edit):
         # Add error message to lineEdit and uncheck the checkbox.
         line_edit.setText("Error uploading file. Try again")
