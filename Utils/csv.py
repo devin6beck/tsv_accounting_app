@@ -12,12 +12,11 @@ class Csv:
             caption="Open CSV File",
             filter="CSV Files, *.csv")[0]
 
+        # If the user presses cancel we want to return None
         if len(self.file_name) == 0:
-            print("IF you pressed cancel this should be showing.")
             return None
 
         if not self.make_list(key_title, value_title):
-            # Show the user an error message.
             self.error_upload_message(key_title, value_title, check_box, line_edit)
             return False
 
@@ -25,7 +24,6 @@ class Csv:
         return True
 
     def make_list(self, key_title, value_title):
-        # Use pandas to read csv file
         data = pd.read_csv(self.file_name)
 
         for column in data:
