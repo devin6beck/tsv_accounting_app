@@ -1,9 +1,7 @@
-# tsv_accounting_app
+# TSV Accounting App
 
-A program that automates the boring parts of completing the Daily accounting spreadsheet at my old job.
+This application streamlines the process of completing the Daily Accounting spreadsheet, targeting routine tasks at my previous job.
 
 ![image](https://user-images.githubusercontent.com/71410748/148700734-8ca34f65-94e7-46c7-a6d5-8f611700bbfb.png)
 
-The user uploads a Fuesbox CSV file that has credit card data and a Siriusware CSV file that has credit card data and descriptions of items sold. The application comapres the two CSV files and lets the user know the difference in the values. The application also compares values given by the user against the Siriusware CSV file. Finnaly the application writes a new .xlsx file using user input and data from the CSV files and saves the new .xlsx file for the user. 
-
-To manually test the application there are example CSV files in the CSV repository.
+Users can upload a Fuesbox CSV file containing credit card transactions and a Siriusware CSV file with both credit card data and item descriptions. The application analyzes these files to identify discrepancies in transaction amounts. Additionally, it cross-references user-provided values with data from the Siriusware CSV file. Finally, the application generates a new .xlsx file incorporating both the user inputs and CSV data, and then saves this file for future use.
